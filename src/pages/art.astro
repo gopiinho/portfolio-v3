@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import innocence from '../images/innocence.jpg'
+import gaze from '../images/peeking.jpg'
+import sisyphus from '../images/sisyphus.jpg'
+import drowning from '../images/drowning.jpg'
+import forward from '../images/keep-moving-forward.png'
+---
+
+<Layout title='Gopinho - Portfolio'>
+  <main class='flex flex-col gap-6 py-20 px-2'>
+    <h5 class='text-semibold text-2xl'>random art & images</h5>
+    <p>
+      I enjoy art, even tho I am not very good at at, sometimes I still like to
+      try. Here are some of the pen art and graphics I have created over the
+      years.
+    </p>
+    <div class='grid grid-flow-row sm:grid-cols-2 gap-3 underline'>
+      <div class='flex flex-col gap-1 text-center'>
+        <Image src={drowning} alt='innocence' class='rounded-2xl' />
+        <span>wondering</span>
+      </div>
+      <div class='flex flex-col gap-1 text-center'>
+        <Image src={innocence} alt='innocence' class='rounded-2xl' /><span
+          >innocence</span
+        >
+      </div>
+      <div class='flex flex-col gap-1 text-center'>
+        <Image src={forward} alt='innocence' class='rounded-2xl' /><span
+          >resilience</span
+        >
+      </div>
+
+      <div class='flex flex-col gap-1 text-center'>
+        <Image src={gaze} alt='innocence' class='rounded-2xl' /><span>gaze</span
+        >
+      </div>
+      <div class='flex flex-col gap-1 text-center'>
+        <Image src={sisyphus} alt='innocence' class='rounded-2xl' /><span
+          >sisyphus</span
+        >
+      </div>
+    </div>
+  </main>
+</Layout>
