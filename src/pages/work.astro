@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title='Gopinho - Portfolio'>
+  <main class='flex flex-col gap-6 py-20 px-2'>
+    <section class='flex flex-col gap-10'>
+      <div class='gap-3 flex flex-col'>
+        <h5 class='font-medium text-2xl border-b border-black'>work</h5>
+        <span>
+          <a
+            href='https://enderprotocol.io'
+            target='_blank'
+            rel='noopener'
+            class='text-lg font-medium underline'
+            >Ender Protocol <span class='text-sm opacity-70'>(2022 - 2024)</span
+            ></a
+          ></span
+        >
+        <p>
+          A liquid staking protocol using LST-bonds to enable concentrated yield
+          tokens and liquid staking power. Powering the metaverse with the
+          Metaverse Bond.
+        </p>
+        <div>
+          <li>Lead Frontend & dApp Developer</li>
+          <li>Smart Contract Integrations</li>
+          <li>API Integrations</li>
+        </div>
+        <div><a href='enderprotocol.io' class='underline'>visit</a></div>
+      </div>
+      <div class='flex flex-col gap-4'>
+        <h5 class='font-medium text-2xl border-b border-black'>projects</h5>
+        <div class='gap-3 flex flex-col'>
+          <span>
+            <a
+              href='https://takeoff-sigma.vercel.app'
+              target='_blank'
+              rel='noopener'
+              class='text-lg font-medium underline'>TakeOff</a
+            ></span
+          >
+          <p>
+            TakeOff is a EVM alternative of pump.fun designed for creating and
+            trading ERC-20 tokens. It allows users to deploy custom tokens,
+            raise 24 eth funding, and participate in token trading through an
+            exponential bonding curve mechanism. The contract integrates with
+            Uniswap V2 for liquidity provisioning and ensures secure and
+            rug-proof trading.
+          </p>
+          <div>
+            <li>Development and testing using foundry</li>
+            <li>
+              dApp developed with nextjs, tailwind & viem/wagmi for contract
+              interactions
+            </li>
+            <!-- <li>API Integrations</li> -->
+          </div>
+          <div class='flex gap-3'>
+            <a
+              href='https://takeoff-sigma.vercel.app'
+              target='_blank'
+              rel='noopener'
+              class='underline'>visit</a
+            ><a
+              href='https://github.com/gopiinho/takeoff'
+              target='_blank'
+              rel='noopener'
+              class='underline'>github</a
+            >
+          </div>
+        </div>
+        <div class='gap-3 flex flex-col'>
+          <span>
+            <a
+              href='https://sympler.xyz'
+              target='_blank'
+              rel='noopener'
+              class='text-lg font-medium underline'>Sympler</a
+            ></span
+          >
+          <p>
+            Sympler is a web3 evm based portfolio application with multichain
+            support. Display balances and token values and easily access charts
+            and trading.
+          </p>
+          <div>
+            <li>Nextjs & tailwind or dApp development and styling</li>
+            <li>Moralis token api for user token data</li>
+            <li>API Integrations</li>
+          </div>
+          <div class='flex gap-3'>
+            <a
+              href='https://sympler.xyz'
+              target='_blank'
+              rel='noopener'
+              class='underline'>visit</a
+            ><a
+              href='https://github.com/gopiinho/sympler'
+              target='_blank'
+              rel='noopener'
+              class='underline'>github</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
