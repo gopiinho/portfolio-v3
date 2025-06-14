@@ -1,20 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import SkillItems from '../components/SkillItems.astro'
+import solLogo from '../images/icons/solidity.svg'
+import foundryLogo from '../images/icons/foundry.png'
+import typescriptLogo from '../images/icons/typescript.svg'
+import tailwindLogo from '../images/icons/tailwindcss.svg'
+import nextLogo from '../images/icons/next.svg'
+import reactLogo from '../images/icons/react_light.svg'
+import nodeLogo from '../images/icons/nodejs.svg'
+import wevmLogo from '../images/icons/wevm.png'
+import convexLogo from '../images/icons/convex.svg'
 ---
 
 <Layout title='Gopinho - Portfolio'>
-  <main class='flex flex-col gap-6 max-sm:py-10 py-20'>
-    <h2 class='font-medium text-4xl'>hey, i'm gopinho 👋</h2>
-    <div class='grid gap-2'>
-      <p>
-        I'm a <span class='font-semibold'>smart contracts</span> and <span
-          class='font-semibold'>full-stack developer</span
-        >.
-      </p>
-      <p>
-        Currently, I am expanding my expertise in EVM and practicing writing
-        secure and robust smart contracts.
-      </p>
+  <main class='flex flex-col gap-12 max-sm:py-10 py-20'>
+    <div class='grid gap-4'>
+      <h2 class='font-medium text-4xl'>hey, i'm gopinho 👋</h2>
+      <div class='grid gap-4'>
+        <p>
+          I'm a <span class='font-semibold'>smart contracts</span> and <span
+            class='font-semibold'>full-stack developer</span
+          >.
+        </p>
+        <p>
+          Currently, I am expanding my expertise in EVM and practicing writing
+          secure and robust smart contracts.
+        </p>
+        <p>Check out my work <a href='/work' class='underline p-0'>here</a></p>
+      </div>
+    </div>
+    <div class='grid gap-4'>
+      <h5 class='text-[22px] font-semibold'>Skills</h5>
+      <div class='grid grid-cols-2 sm:grid-cols-3 gap-3'>
+        <SkillItems logo={solLogo} name='Solidity' />
+        <SkillItems logo={foundryLogo} name='Foundry' />
+        <SkillItems logo={wevmLogo} name='Viem | Wagmi' />
+        <SkillItems logo={typescriptLogo} name='Typescript' />
+        <SkillItems logo={nextLogo} name='Next.js' />
+        <SkillItems logo={reactLogo} name='React' />
+        <SkillItems logo={tailwindLogo} name='Tailwind CSS' />
+        <SkillItems logo={nodeLogo} name='Node.js' />
+        <SkillItems logo={convexLogo} name='Convex' />
+      </div>
     </div>
     <p>
       Contact me on <a

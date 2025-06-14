@@ -18,36 +18,47 @@ const {
 }: Props = Astro.props
 ---
 
-<div class='gap-3 flex flex-col'>
+<div class='gap-3 grid hover:bg-card duration-300 lg:px-2 py-3 rounded-lg'>
   <span>
     <a
       href={visitLink}
       target='_blank'
       rel='noopener'
-      class='text-xl font-medium underline'>{title}</a
+      class='text-2xl font-medium underline'>{title}</a
     ></span
   >
-  <p>
-    {description}
-  </p>
-  <div class='flex gap-2 flex-wrap items-center'>
-    {
-      stack.map((item, index) => (
-        <>
-          <span>{item}</span>
-          {index < stack.length - 1 && <span>•</span>}
-        </>
-      ))
-    }
-  </div>
-  <div>
-    {listItems.map((item) => <li>{item}</li>)}
-  </div>
-  <div class='flex gap-3'>
-    <a href={visitLink} target='_blank' rel='noopener' class='underline'
-      >visit</a
-    ><a href={githubLink} target='_blank' rel='noopener' class='underline'
-      >github</a
-    >
+  <div class='grid gap-3 lg:px-2'>
+    <p>
+      {description}
+    </p>
+    <div class='flex gap-2 flex-wrap items-center'>
+      {
+        stack.map((item, index) => (
+          <>
+            <span class='border-[0.5px] py-1 px-2 text-sm'>{item}</span>
+            {index < stack.length - 1 && <span>•</span>}
+          </>
+        ))
+      }
+    </div>
+    <div class='grid gap-1 py-2'>
+      <div class='space-y-1'>
+        {
+          listItems.map((item) => (
+            <div class='flex'>
+              <span class='mr-2 mt-0 flex-shrink-0'>•</span>
+              <span class='flex-1'>{item}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class='flex gap-3'>
+      <a href={visitLink} target='_blank' rel='noopener' class='underline'
+        >visit</a
+      ><a href={githubLink} target='_blank' rel='noopener' class='underline'
+        >github</a
+      >
+    </div>
   </div>
 </div>
