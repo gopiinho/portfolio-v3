@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica.tff') format('tff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  padding: 2px;
+}
+a:hover {
+  opacity: 0.7;
+  transition-duration: 200ms;
+}
