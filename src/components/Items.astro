@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string
+  description: string
+  stack: string[]
+  visitLink: string
+  githubLink: string
+  listItems?: string[]
+}
+
+const {
+  title,
+  description,
+  stack,
+  visitLink,
+  githubLink,
+  listItems = [],
+}: Props = Astro.props
+---
+
+<div class='gap-3 flex flex-col'>
+  <span>
+    <a
+      href={visitLink}
+      target='_blank'
+      rel='noopener'
+      class='text-xl font-medium underline'>{title}</a
+    ></span
+  >
+  <p>
+    {description}
+  </p>
+  <div class='flex gap-2 flex-wrap items-center'>
+    {
+      stack.map((item, index) => (
+        <>
+          <span>{item}</span>
+          {index < stack.length - 1 && <span>•</span>}
+        </>
+      ))
+    }
+  </div>
+  <div>
+    {listItems.map((item) => <li>{item}</li>)}
+  </div>
+  <div class='flex gap-3'>
+    <a href={visitLink} target='_blank' rel='noopener' class='underline'
+      >visit</a
+    ><a href={githubLink} target='_blank' rel='noopener' class='underline'
+      >github</a
+    >
+  </div>
+</div>
