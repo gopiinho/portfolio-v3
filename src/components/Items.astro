@@ -35,7 +35,9 @@ const {
       {
         stack.map((item, index) => (
           <>
-            <span class='border-[0.5px] py-1 px-2 text-sm'>{item}</span>
+            <span class='border-[0.5px] rounded-lg py-1 px-2 text-sm'>
+              {item}
+            </span>
             {index < stack.length - 1 && <span>•</span>}
           </>
         ))

@@ -5,9 +5,14 @@ import Items from '../components/Items.astro'
 
 <Layout title='Gopinho - Portfolio'>
   <main class='flex flex-col gap-6 max-sm:py-10 py-20'>
+    <div class='flex gap-4 mb-4 text-sm'>
+      <a href='#work'>work</a>
+      <a href='#projects'>projects</a>
+      <a href='#open-source'>open-source</a>
+    </div>
     <section class='flex flex-col gap-12'>
       <div class='gap-3 flex flex-col'>
-        <h5 class='font-medium text-4xl'>work</h5>
+        <h5 id='work' class='font-medium text-4xl'>work</h5>
         <div
           class='gap-3 grid hover:bg-card duration-300 lg:px-2 pt-3 pb-4 rounded-lg'
         >
@@ -45,7 +50,7 @@ import Items from '../components/Items.astro'
         </div>
       </div>
       <div class='flex flex-col gap-3'>
-        <h5 class='font-medium text-4xl'>projects</h5>
+        <h5 id='projects' class='font-medium text-4xl'>projects</h5>
         <div class='grid gap-8'>
           <Items
             title='create-w3-app'
@@ -123,6 +128,52 @@ import Items from '../components/Items.astro'
               'Next.js application with Viem/Wagmi examples.',
             ]}
           />
+        </div>
+      </div>
+      <div class='gap-3 flex flex-col'>
+        <h5 id='open-source' class='font-medium text-4xl'>open-source</h5>
+        <div
+          class='gap-3 grid hover:bg-card duration-300 lg:px-2 pt-3 pb-4 rounded-lg'
+        >
+          <span>
+            <a
+              href='https://swiss-knife.xyz/'
+              target='_blank'
+              rel='noopener'
+              class='text-2xl font-medium underline'>Swiss-Knife</a
+            ></span
+          >
+          <div class='grid gap-3 lg:px-2'>
+            <p>
+              Build few tools for Swiss-Knife, a webapp with multiple EVM tools
+              in one place.
+            </p>
+            <div class='grid gap-1 py-2'>
+              <div class='space-y-1'>
+                <div class='flex'>
+                  <span class='mr-2 mt-0 flex-shrink-0'>•</span>
+                  <span class='flex-1'
+                    >Tool to verify and sign simple messages and EIP712 typed
+                    data signatures, that can be shared.</span
+                  >
+                </div>
+                <div class='flex'>
+                  <span class='mr-2 mt-0 flex-shrink-0'>•</span>
+                  <span class='flex-1'
+                    >Tool to get EIP-712, Domain and Message hash of typed data.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <a
+                href='https://swiss-knife.xyz/'
+                target='_blank'
+                rel='noopener'
+                class='underline text-lg'>visit</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
