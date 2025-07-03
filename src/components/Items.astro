@@ -5,6 +5,7 @@ interface Props {
   stack: string[]
   visitLink: string
   githubLink: string
+  demoLink?: string
   listItems?: string[]
 }
 
@@ -14,6 +15,7 @@ const {
   stack,
   visitLink,
   githubLink,
+  demoLink,
   listItems = [],
 }: Props = Astro.props
 ---
@@ -61,6 +63,13 @@ const {
       ><a href={githubLink} target='_blank' rel='noopener' class='underline'
         >github</a
       >
+      {
+        demoLink && (
+          <a href={demoLink} target='_blank' rel='noopener' class='underline'>
+            demo
+          </a>
+        )
+      }
     </div>
   </div>
 </div>
