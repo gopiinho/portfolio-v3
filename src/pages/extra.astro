@@ -1,4 +1,5 @@
 ---
+import PostHogLayout from '../layouts/PostHogLayout.astro'
 import Layout from '../layouts/Layout.astro'
 import { Image } from 'astro:assets'
 import innocence from '../images/innocence.jpg'
@@ -9,38 +10,36 @@ import forward from '../images/keep-moving-forward.png'
 import unseen from '../images/unseen-within.png'
 ---
 
-<Layout title='Gopinho - Portfolio'>
-  <main class='flex flex-col gap-6 max-sm:py-10 py-20'>
-    <h5 class='font-medium text-4xl'>random art & images</h5>
-    <div class='grid grid-flow-row sm:grid-cols-2 gap-3 underline'>
-      <div class='flex flex-col gap-1 text-center'>
-        <Image src={drowning} alt='innocence' class='rounded-2xl' />
-        <span>wondering</span>
+<PostHogLayout>
+  <Layout title='Gopinho - Portfolio'>
+    <main class='flex flex-col gap-6 max-sm:py-10 py-20'>
+      <h5 class='font-medium text-4xl'>random art & images</h5>
+      <div class='grid grid-flow-row sm:grid-cols-2 gap-3 underline'>
+        <div class='flex flex-col gap-1 text-center'>
+          <Image src={drowning} alt='innocence' class='rounded-2xl' />
+          <span>wondering</span>
+        </div>
+        <div class='flex flex-col gap-1 text-center'>
+          <Image src={innocence} alt='innocence' class='rounded-2xl' />
+          <span>innocence</span>
+        </div>
+        <div class='flex flex-col gap-1 text-center'>
+          <Image src={forward} alt='innocence' class='rounded-2xl' />
+          <span>resilience</span>
+        </div>
+        <div class='flex flex-col gap-1 text-center'>
+          <Image src={unseen} alt='innocence' class='rounded-2xl' />
+          <span>unseen within</span>
+        </div>
+        <div class='flex flex-col gap-1 text-center'>
+          <Image src={gaze} alt='innocence' class='rounded-2xl' />
+          <span>gaze</span>
+        </div>
+        <div class='flex flex-col gap-1 text-center'>
+          <Image src={sisyphus} alt='innocence' class='rounded-2xl' />
+          <span>sisyphus</span>
+        </div>
       </div>
-      <div class='flex flex-col gap-1 text-center'>
-        <Image src={innocence} alt='innocence' class='rounded-2xl' /><span
-          >innocence</span
-        >
-      </div>
-      <div class='flex flex-col gap-1 text-center'>
-        <Image src={forward} alt='innocence' class='rounded-2xl' /><span
-          >resilience</span
-        >
-      </div>
-      <div class='flex flex-col gap-1 text-center'>
-        <Image src={unseen} alt='innocence' class='rounded-2xl' /><span
-          >unseen within</span
-        >
-      </div>
-      <div class='flex flex-col gap-1 text-center'>
-        <Image src={gaze} alt='innocence' class='rounded-2xl' /><span>gaze</span
-        >
-      </div>
-      <div class='flex flex-col gap-1 text-center'>
-        <Image src={sisyphus} alt='innocence' class='rounded-2xl' /><span
-          >sisyphus</span
-        >
-      </div>
-    </div>
-  </main>
-</Layout>
+    </main>
+  </Layout>
+</PostHogLayout>

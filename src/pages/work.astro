@@ -1,182 +1,186 @@
 ---
+import PostHogLayout from '../layouts/PostHogLayout.astro'
 import Layout from '../layouts/Layout.astro'
 import Items from '../components/Items.astro'
 ---
 
-<Layout title='Gopinho - Portfolio'>
-  <main class='flex flex-col gap-6 max-sm:py-10 py-20'>
-    <div class='flex gap-4 mb-4 text-sm'>
-      <a href='#work'>work</a>
-      <a href='#projects'>projects</a>
-      <a href='#open-source'>open-source</a>
-    </div>
-    <section class='flex flex-col gap-12'>
-      <div class='gap-3 flex flex-col'>
-        <h5 id='work' class='font-medium text-4xl'>work</h5>
-        <div
-          class='gap-3 grid hover:bg-card duration-300 lg:px-2 pt-3 pb-4 rounded-lg'
-        >
-          <span>
-            <a
-              href='https://enderprotocol.io'
-              target='_blank'
-              rel='noopener'
-              class='text-2xl font-medium underline'
-              >Ender Protocol <span class='text-sm opacity-70'
-                >(2022 - 2024)</span
-              ></a
-            ></span
+<PostHogLayout>
+  <Layout title='Gopinho - Portfolio'>
+    <main class='flex flex-col gap-6 max-sm:py-10 py-20'>
+      <div class='flex gap-4 mb-4 text-sm'>
+        <a href='#work'>work</a>
+        <a href='#projects'>projects</a>
+        <a href='#open-source'>open-source</a>
+      </div>
+      <section class='flex flex-col gap-12'>
+        <div class='gap-3 flex flex-col'>
+          <h5 id='work' class='font-medium text-4xl'>work</h5>
+          <div
+            class='gap-3 grid hover:bg-card duration-300 lg:px-2 pt-3 pb-4 rounded-lg'
           >
-          <div class='grid gap-3 lg:px-2'>
-            <p>
-              A liquid staking protocol using LST-bonds to enable concentrated
-              yield tokens and liquid staking power. Powering the metaverse with
-              the Metaverse Bond.
-            </p>
-            <div>
-              <li>Lead Frontend & dApp Developer</li>
-              <li>Smart Contract Integrations</li>
-              <li>API Integrations</li>
-            </div>
-            <div>
+            <span>
               <a
                 href='https://enderprotocol.io'
                 target='_blank'
                 rel='noopener'
-                class='underline text-lg'>visit</a
-              >
+                class='text-2xl font-medium underline'
+                >Ender Protocol <span class='text-sm opacity-70'
+                  >(2022 - 2024)</span
+                ></a
+              ></span
+            >
+            <div class='grid gap-3 lg:px-2'>
+              <p>
+                A liquid staking protocol using LST-bonds to enable concentrated
+                yield tokens and liquid staking power. Powering the metaverse
+                with the Metaverse Bond.
+              </p>
+              <div>
+                <li>Lead Frontend & dApp Developer</li>
+                <li>Smart Contract Integrations</li>
+                <li>API Integrations</li>
+              </div>
+              <div>
+                <a
+                  href='https://enderprotocol.io'
+                  target='_blank'
+                  rel='noopener'
+                  class='underline text-lg'>visit</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class='flex flex-col gap-3'>
-        <h5 id='projects' class='font-medium text-4xl'>projects</h5>
-        <div class='grid gap-8'>
-          <Items
-            title='create-w3-app'
-            description='Interactive CLI tool to quickly scaffold an Ethereum Next.js application. It is a simple way to get started with your web application, potentially saving hours of setup.'
-            stack={['typescript', 'next.js', 'node.js', 'commander', 'clack']}
-            visitLink='https://www.npmjs.com/package/create-w3-app'
-            githubLink='https://github.com/gopiinho/create-w3-app'
-            demoLink='https://www.youtube.com/watch?v=CZv-5CdINIo'
-            listItems={[
-              'Wallet connection options of Privy or Rainbowkit.',
-              'Optional Tailwindcss & shadcn/ui for styling.',
-              'Next.js App or Pages router.',
-              'Eslint + Prettier or Biome for code formatting.',
-            ]}
-          />
-          <Items
-            title='DeployFast'
-            description='DeployFast is an application that deploys basic smart contracts with a few clicks. It makes it easy for users to deploy smart contracts on the required network, ranging from tokens to NFTs.'
-            stack={[
-              'solidity',
-              'typescript',
-              'next.js',
-              'viem',
-              'wagmi',
-              'privy',
-              'convex',
-            ]}
-            visitLink='https://deployfast.xyz'
-            githubLink='https://github.com/gopiinho/deploy-fast'
-            listItems={[
-              'Smart contracts developed and tested using Foundry.',
-              'Full stack application built with Next.js, Tailwind, shadcn for styling, and Viem/Wagmi for contract interactions.',
-              'Uses Privy to handle authentication and user wallets.',
-              'Convex DB for managing user data.',
-            ]}
-          />
-          <Items
-            title='TakeOff'
-            description='TakeOff is an EVM alternative to pump.fun, designed for creating and trading ERC-20 tokens. It allows users to deploy custom tokens, raise funding, and participate in token trading through an exponential bonding curve mechanism. The contract integrates with Uniswap V2 for liquidity provisioning and ensures secure, rug-proof trading.'
-            stack={[
-              'solidity',
-              'foundry',
-              'next.js',
-              'tailwind',
-              'viem',
-              'wagmi',
-            ]}
-            visitLink='https://takeoff.gopinho.com/'
-            githubLink='https://github.com/gopiinho/takeoff'
-            listItems={[
-              'Development and testing using Foundry.',
-              'dApp developed with Next.js, Tailwind & Viem/Wagmi for contract interactions.',
-            ]}
-          />
-          <Items
-            title='Sympler'
-            description='Sympler is a web3 EVM-based portfolio application with multichain support. Display balances, token values, and easily access charts and trading features.'
-            stack={['next.js', 'tailwind', 'moralis']}
-            visitLink='https://sympler.xyz'
-            githubLink='https://github.com/gopiinho/sympler'
-            listItems={[
-              'Next.js & Tailwind for dApp development and styling.',
-              'Moralis Token API for user token data.',
-              'API Integrations.',
-            ]}
-          />
-          <Items
-            title='Web3 Frontends'
-            description='Short tutorials on how anyone can get started with dApp development. '
-            stack={['next.js', 'viem', 'wagmi']}
-            visitLink='https://frontends.gopinho.com/'
-            githubLink='https://github.com/gopiinho/web3-frontends'
-            listItems={[
-              'Setting up wallets, read and write from contracts.',
-              'Video tutorials on YouTube.',
-              'Next.js application with Viem/Wagmi examples.',
-            ]}
-          />
+        <div class='flex flex-col gap-3'>
+          <h5 id='projects' class='font-medium text-4xl'>projects</h5>
+          <div class='grid gap-8'>
+            <Items
+              title='create-w3-app'
+              description='Interactive CLI tool to quickly scaffold an Ethereum Next.js application. It is a simple way to get started with your web application, potentially saving hours of setup.'
+              stack={['typescript', 'next.js', 'node.js', 'commander', 'clack']}
+              visitLink='https://www.npmjs.com/package/create-w3-app'
+              githubLink='https://github.com/gopiinho/create-w3-app'
+              demoLink='https://www.youtube.com/watch?v=CZv-5CdINIo'
+              listItems={[
+                'Wallet connection options of Privy or Rainbowkit.',
+                'Optional Tailwindcss & shadcn/ui for styling.',
+                'Next.js App or Pages router.',
+                'Eslint + Prettier or Biome for code formatting.',
+              ]}
+            />
+            <Items
+              title='DeployFast'
+              description='DeployFast is an application that deploys basic smart contracts with a few clicks. It makes it easy for users to deploy smart contracts on the required network, ranging from tokens to NFTs.'
+              stack={[
+                'solidity',
+                'typescript',
+                'next.js',
+                'viem',
+                'wagmi',
+                'privy',
+                'convex',
+              ]}
+              visitLink='https://deployfast.xyz'
+              githubLink='https://github.com/gopiinho/deploy-fast'
+              listItems={[
+                'Smart contracts developed and tested using Foundry.',
+                'Full stack application built with Next.js, Tailwind, shadcn for styling, and Viem/Wagmi for contract interactions.',
+                'Uses Privy to handle authentication and user wallets.',
+                'Convex DB for managing user data.',
+              ]}
+            />
+            <Items
+              title='TakeOff'
+              description='TakeOff is an EVM alternative to pump.fun, designed for creating and trading ERC-20 tokens. It allows users to deploy custom tokens, raise funding, and participate in token trading through an exponential bonding curve mechanism. The contract integrates with Uniswap V2 for liquidity provisioning and ensures secure, rug-proof trading.'
+              stack={[
+                'solidity',
+                'foundry',
+                'next.js',
+                'tailwind',
+                'viem',
+                'wagmi',
+              ]}
+              visitLink='https://takeoff.gopinho.com/'
+              githubLink='https://github.com/gopiinho/takeoff'
+              listItems={[
+                'Development and testing using Foundry.',
+                'dApp developed with Next.js, Tailwind & Viem/Wagmi for contract interactions.',
+              ]}
+            />
+            <Items
+              title='Sympler'
+              description='Sympler is a web3 EVM-based portfolio application with multichain support. Display balances, token values, and easily access charts and trading features.'
+              stack={['next.js', 'tailwind', 'moralis']}
+              visitLink='https://sympler.xyz'
+              githubLink='https://github.com/gopiinho/sympler'
+              listItems={[
+                'Next.js & Tailwind for dApp development and styling.',
+                'Moralis Token API for user token data.',
+                'API Integrations.',
+              ]}
+            />
+            <Items
+              title='Web3 Frontends'
+              description='Short tutorials on how anyone can get started with dApp development. '
+              stack={['next.js', 'viem', 'wagmi']}
+              visitLink='https://frontends.gopinho.com/'
+              githubLink='https://github.com/gopiinho/web3-frontends'
+              listItems={[
+                'Setting up wallets, read and write from contracts.',
+                'Video tutorials on YouTube.',
+                'Next.js application with Viem/Wagmi examples.',
+              ]}
+            />
+          </div>
         </div>
-      </div>
-      <div class='gap-3 flex flex-col'>
-        <h5 id='open-source' class='font-medium text-4xl'>open-source</h5>
-        <div
-          class='gap-3 grid hover:bg-card duration-300 lg:px-2 pt-3 pb-4 rounded-lg'
-        >
-          <span>
-            <a
-              href='https://swiss-knife.xyz/'
-              target='_blank'
-              rel='noopener'
-              class='text-2xl font-medium underline'>Swiss-Knife</a
-            ></span
+        <div class='gap-3 flex flex-col'>
+          <h5 id='open-source' class='font-medium text-4xl'>open-source</h5>
+          <div
+            class='gap-3 grid hover:bg-card duration-300 lg:px-2 pt-3 pb-4 rounded-lg'
           >
-          <div class='grid gap-3 lg:px-2'>
-            <p>
-              Build few tools for Swiss-Knife, a webapp with multiple EVM tools
-              in one place.
-            </p>
-            <div class='grid gap-1 py-2'>
-              <div class='space-y-1'>
-                <div class='flex'>
-                  <span class='mr-2 mt-0 flex-shrink-0'>•</span>
-                  <span class='flex-1'
-                    >Tool to verify and sign simple messages and EIP712 typed
-                    data signatures, that can be shared.</span
-                  >
-                </div>
-                <div class='flex'>
-                  <span class='mr-2 mt-0 flex-shrink-0'>•</span>
-                  <span class='flex-1'
-                    >Tool to get EIP-712, Domain and Message hash of typed data.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div>
+            <span>
               <a
                 href='https://swiss-knife.xyz/'
                 target='_blank'
                 rel='noopener'
-                class='underline text-lg'>visit</a
-              >
+                class='text-2xl font-medium underline'>Swiss-Knife</a
+              ></span
+            >
+            <div class='grid gap-3 lg:px-2'>
+              <p>
+                Build few tools for Swiss-Knife, a webapp with multiple EVM
+                tools in one place.
+              </p>
+              <div class='grid gap-1 py-2'>
+                <div class='space-y-1'>
+                  <div class='flex'>
+                    <span class='mr-2 mt-0 flex-shrink-0'>•</span>
+                    <span class='flex-1'
+                      >Tool to verify and sign simple messages and EIP712 typed
+                      data signatures, that can be shared.</span
+                    >
+                  </div>
+                  <div class='flex'>
+                    <span class='mr-2 mt-0 flex-shrink-0'>•</span>
+                    <span class='flex-1'
+                      >Tool to get EIP-712, Domain and Message hash of typed
+                      data.</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a
+                  href='https://swiss-knife.xyz/'
+                  target='_blank'
+                  rel='noopener'
+                  class='underline text-lg'>visit</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-</Layout>
+      </section>
+    </main>
+  </Layout>
+</PostHogLayout>
