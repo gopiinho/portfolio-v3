@@ -55,6 +55,18 @@ import Items from '../components/Items.astro'
           <h5 id='projects' class='font-medium text-4xl'>projects</h5>
           <div class='grid gap-8'>
             <Items
+              title='Tossoff (Abstract Testnet Beta)'
+              description='PvP Cointoss game with verifiable random numbers. Built on top of Abstract Global Wallets.'
+              stack={['solidity', 'next.js', 'typescript', 'wagmi']}
+              visitLink='https://tossoff.xyz'
+              githubLink='https://github.com/gopiinho/tossoff-contracts'
+              listItems={[
+                'Using proof of play vrf system.',
+                'Integrated abstract global wallets for user sessions.',
+                'Socket.io websockets for real-time game updates.',
+              ]}
+            />
+            <Items
               title='create-w3-app'
               description='Interactive CLI tool to quickly scaffold an Ethereum Next.js application. It is a simple way to get started with your web application, potentially saving hours of setup.'
               stack={['typescript', 'next.js', 'node.js', 'commander', 'clack']}
