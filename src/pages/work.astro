@@ -7,50 +7,55 @@ import Items from '../components/Items.astro'
 <PostHogLayout>
   <Layout title='Gopinho - Portfolio'>
     <main class='flex flex-col gap-6 max-sm:py-10 py-20'>
-      <div class='flex gap-4 mb-4 text-sm'>
-        <a href='#work'>work</a>
-        <a href='#projects'>projects</a>
-        <a href='#open-source'>open-source</a>
+      <div class='flex mb-4 text-sm'>
+        <a class='px-2' href='#work'>work</a>
+        <a class='px-2' href='#projects'>projects</a>
+        <a class='px-2' href='#open-source'>open-source</a>
       </div>
       <section class='flex flex-col gap-12'>
         <div class='gap-3 flex flex-col'>
           <h5 id='work' class='font-medium text-4xl'>work</h5>
-          <div
-            class='gap-3 grid hover:bg-card duration-300 lg:px-2 pt-3 pb-4 rounded-lg'
-          >
-            <span>
-              <a
-                href='https://enderprotocol.io'
-                target='_blank'
-                rel='noopener'
-                class='text-2xl font-medium underline'
-                >Ender Protocol <span class='text-sm opacity-70'
-                  >(2022 - 2024)</span
-                ></a
-              ></span
-            >
-            <div class='grid gap-3 lg:px-2'>
-              <p>
-                A liquid staking protocol using LST-bonds to enable concentrated
-                yield tokens and liquid staking power. Powering the metaverse
-                with the Metaverse Bond.
-              </p>
-              <div>
-                <li>Lead Frontend & dApp Developer</li>
-                <li>Smart Contract Integrations</li>
-                <li>API Integrations</li>
-              </div>
-              <div>
-                <a
-                  href='https://enderprotocol.io'
-                  target='_blank'
-                  rel='noopener'
-                  class='underline text-lg'>visit</a
-                >
-              </div>
-            </div>
+          <div class='grid gap-8'>
+            <Items
+              title='ValidVote'
+              description='A full-stack Web3 voting platform enabling secure, verifiable, and automated on-chain governance with modern backend and frontend integrations.'
+              stack={[
+                'solidity',
+                'foundry',
+                'next.js',
+                'typescript',
+                'postgresql',
+                'drizzle',
+                'upstash',
+                'resend',
+                'stripe',
+              ]}
+              visitLink='https://validvote.de'
+              listItems={[
+                'Developed secure, fully tested smart contracts in Foundry for on-chain voting logic.',
+                'Built the dApp frontend with Next.js, TypeScript, Viem, and Wagmi for seamless on-chain interactions.',
+                'Implemented automated email notification service using Upstash and Resend for proposal updates.',
+                'Integrated Stripe payments for premium organizational accounts and verified submissions.',
+                'Architected backend infrastructure with PostgreSQL + Drizzle ORM via Next.js API routes for scalable data persistence.',
+              ]}
+            />
+            <Items
+              title='Ender Protocol'
+              description='A liquid staking protocol using LST-bonds to enable concentrated yield tokens and liquid staking power, powering the Metaverse Bond.'
+              stack={['solidity', 'next.js', 'typescript', 'wagmi', 'tailwind']}
+              visitLink='https://enderprotocol.io'
+              githubLink='https://github.com/gopiinho/ender-protocol'
+              listItems={[
+                'Led frontend and dApp development, ensuring clean, scalable architecture and smooth team collaboration.',
+                'Built and maintained core frontend features for protocol websites, focusing on usability and performance.',
+                'Integrated blockchain wallet connections (WalletConnect, MetaMask) for seamless on-chain interactions.',
+                'Streamlined Git workflows and CI/CD pipelines for reliable deployments.',
+                'Implemented an in-app Solidity compiler feature to generate and verify ABIs and bytecode, simplifying developer workflows.',
+              ]}
+            />
           </div>
         </div>
+
         <div class='flex flex-col gap-3'>
           <h5 id='projects' class='font-medium text-4xl'>projects</h5>
           <div class='grid gap-8'>
