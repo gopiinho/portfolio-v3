@@ -32,7 +32,7 @@ html {
     @apply lg:w-[50%] lg:mx-auto py-5 px-4 lg:p-10;
   }
   body {
-    @apply bg-background text-[17px] text-foreground;
+    @apply bg-background text-base text-foreground;
   }
   a {
     @apply p-[2px] hover:opacity-70 duration-200;

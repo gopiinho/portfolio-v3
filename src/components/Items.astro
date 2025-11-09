@@ -40,9 +40,7 @@ const {
       {
         stack?.map((item, index) => (
           <>
-            <span class='border-[0.5px] border-black/20 rounded-lg py-1 px-2 text-sm'>
-              {item}
-            </span>
+            <span class='bg-card rounded-md py-1 px-2 text-sm'>{item}</span>
             {index < stack.length - 1 && <span>•</span>}
           </>
         ))
