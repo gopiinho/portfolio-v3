@@ -9,7 +9,11 @@ interface Props {
 const { logo, name }: Props = Astro.props
 ---
 
-<span class='flex gap-3 items-center py-3 px-4 bg-card rounded-md'>
-  <Image class='w-4 sm:w-6 grayscale' src={logo} alt=`${name} logo` />
+<span class='flex gap-3 items-center py-3 px-4 bg-card group rounded-md'>
+  <Image
+    class='w-4 sm:w-6 grayscale group-hover:grayscale-0 transition'
+    src={logo}
+    alt=`${name} logo`
+  />
   {name}
 </span>
